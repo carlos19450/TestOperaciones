@@ -13,32 +13,38 @@ import java.util.Scanner;
 public class TESTOPERACIONES {
 
     /**
-     * Método para multiplicar a * b.
-     * @param a variable para multiplicar por b.
-     * @param b variable para multiplicar por a.
-     * @return devuelve a * b.
+     * Método que multiplica dos números enteros
+     * @param a Primer número emtero
+     * @param b Segundo número entero
+     * @return 
      */
-    public static int multiplica(int a, int b) {
-        return a * b;
+public static int multiplica(int a, int b) {
+    return a*b;
+}
+/**
+ * Método par acalcular ell factorial de un número
+ * @param num El número que se le introduce
+ * @return 
+ */
+public static int factorial(int num) {
+    int factorial=num;
+    if(num < 0 ) {
+        throw new
+            IllegalArgumentException("Factorial negativo!");
     }
-    
-    /**
-     * @param args the command line arguments
-     */
+    for (int i = (num - 1); i > 1; i--) {
+        factorial *= i;
+    }
+    return factorial;
+}
     public static void main(String[] args) {
         // TODO code application logic here
-        int a , b;
-        Scanner read = new Scanner(System.in);
+        int x=3;
+        int y=6;
+        System.out.println(multiplica(x, y));
         
-        System.out.print("Introduce un numero: ");
-        a = read.nextInt();
-        System.out.println();
-        
-        System.out.print("Introduce otro numero: ");
-        b = read.nextInt();
-        System.out.println();
-        
-        System.out.println(multiplica(a, b));
+        int numero=5;
+        System.out.println(factorial(numero));
     }
     
 }
